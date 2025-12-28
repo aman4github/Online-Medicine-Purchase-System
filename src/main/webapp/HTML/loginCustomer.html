@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../IMAGE/Logo/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+
+    <!-- Navbar starts here -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-color bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../IMAGE/Logo/main_logo.png" alt="" height="0" width="98" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse pre-nav" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../JSP/index.jsp">Home</a>
+                    </li>
+                    <li class="nav-item active"  aria-current="page" >
+                        <a class="nav-link" href="#">Customer Login Form</a>
+                    </li>
+
+                </ul>
+
+                
+            <!-- Modal starts here  -->
+                <!-- Button trigger modal -->
+                 <button type="button" class="btn btn-primary modal-login" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    HELP
+                </button> 
+
+            <!-- Modal -->
+                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="../IMAGE/Modal/warning.png" class="modal-img img-fluid" alt="">
+                            </div>
+                            <div class="modal-body">
+                                <a href="forgotUsername.html">
+                                    <button type="button" class="btn btn-outline-dark">FORGOT USERNAME</button>
+                                </a>
+                                <a href="forgotPass.html">
+                                    <button type="button" class="btn btn-outline-dark">FORGOT PASSWORD</button>
+                                </a>
+                            </div>
+                            <div class="modal-footer">
+                                <P>Don't have an Account ?
+                                    <a href="user_registration_form.html">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">APPLY
+                                            NOW</button>
+                                    </a>
+                                </P>
+                            </div>
+                            <div class="modal-close">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            <!-- Modal ends here  -->
+
+            </div>
+        </div>
+    </nav>
+<!-- Navbar ends here -->
+
+    <div class="wrapper">
+        <form action="../SessionServletCustomer" method="post">
+            <h2 style="color: white;">Login</h2>
+            <div class="input-field">
+                <input type="text" name="txtusername" required>
+                <label>User Name / Email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="txtpassword" required>
+                <label>Password</label>
+            </div>
+            
+            
+            <button type="submit">Log In</button>
+            <div class="register">
+                <p>Don't have an account? <a href="user_registration_form.html"> Create an account</a></p>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

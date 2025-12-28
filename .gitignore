@@ -1,0 +1,12 @@
+# Eclipse local settings (DO NOT UPLOAD)
+.settings/
+
+# Compiled files
+*.class
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

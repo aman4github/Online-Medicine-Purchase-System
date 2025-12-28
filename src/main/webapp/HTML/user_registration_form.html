@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../IMAGE/Logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/registration_form.css">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>New User Registration Form</title>
+</head>
+
+<body>
+
+    <!-- Navbar starts here -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-color bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../IMAGE/Logo/main_logo.png" alt="" height="0" width="98" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse pre-nav" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../JSP/index.jsp">Home</a>
+                    </li>
+                    <li class="nav-item active"  aria-current="page" >
+                        <a class="nav-link" href="#">New User Registration Form</a>
+                    </li>
+
+                </ul>
+
+                
+
+                <!-- Modal starts here  -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary modal-login" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    LOGIN
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="../IMAGE/Modal/question-mark.png" class="modal-img img-fluid" alt="">
+                            </div>
+                            <div class="modal-body">
+                                <a href="adminLogin.html">
+                                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">LOGIN FOR
+                                        ADMIN</button>
+                                </a>
+                                <a href="loginCustomer.html">
+                                    <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">LOGIN FOR
+                                        CUSTOMER</button>
+                                </a>
+                            </div>
+                            <div class="modal-footer">
+                                <P>Don't have an Account ?
+                                    <a href="user_registration_form.html">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">APPLY
+                                            NOW</button>
+                                    </a>
+                                </P>
+                            </div>
+                            <div class="modal-close">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal ends here  -->
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends here -->
+
+    <main>
+
+        <div class="container">
+            <header>New Account</header>
+
+            <form action="../emailVerification" method="post">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" name="fname" id="name" placeholder="Enter your name" oninput="validateName()"
+                                    required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" name="fphone" id="phone" placeholder="Enter mobile number" oninput="validatePhoneNumber()" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="text" name="femail" id="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="date" name="fdob" id="dob" placeholder="Enter birth date" oninput="validateDOB()" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Gender</label>
+                                <select id="gender" name="fgender" required>
+                                    <option disabled selected>Select gender</option>
+                                    <option name="fgender" value="male">Male</option>
+                                    <option name="fgender" value="female">Female</option>
+                                    <option name="fgender" value="others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nationality</label>
+                                <input type="text" placeholder="Enter your nationality" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details ID">
+                        <span class="title">Identity Details</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>ID Type</label>
+                                <select required>
+                                    <option disabled selected>Select ID Type</option>
+                                    <option>Aadhar Card</option>
+                                    <option>Pan Card</option>
+                                    <option>Voter ID Card</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>ID Number</label>
+                                <input type="text" placeholder="Enter ID number" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Co-Holder Name (Optional)</label>
+                                <input type="text" name="fcoholder" placeholder="Enter your Nominee Name">
+                            </div>
+                        </div>
+
+                        <button class="nextBtn" type="button">
+                            <span class="btnText">Next</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="result"></div>
+
+                <div class="form second">
+                    <div class="details address">
+                        <span class="title">Address Details</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Address Type</label>
+                                <select id="addType" name="fType" required>
+                                    <option disabled selected>Select Type</option>
+                                    <option name="fPermanent" value="Permanent">Permanent</option>
+                                    <option name="fTemporary" value="Temporary">Temporary</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Full Address</label>
+                                <input type="text" name="faddress" placeholder="Enter your address" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>City</label>
+                                <input type="text" name="fcity" placeholder="Enter your city" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Pin</label>
+                                <input type="number" name="fpin" placeholder="Enter your pin code" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>District</label>
+                                <input type="text" name="fdistrict" placeholder="Enter your district" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>State</label>
+                                <input type="text" name="fstate" placeholder="Enter your state" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details family">
+                        <span class="title">Disability Details</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Disability</label>
+                                <select required>
+                                    <option disabled selected>Select Yes/No</option>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Type</label>
+                                <select required>
+                                    <option disabled selected>Select Disability</option>
+                                    <option>Not Applicable</option>
+                                    <option>Visual Impairment</option>
+                                    <option>Hearing Impairment</option>
+                                    <option>Physical Disability</option>
+                                    <option>Learning Disability</option>
+                                    <option>Autism / Developmental</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Percentage</label>
+                                <input type="number" name="fpass" placeholder="Enter percentage of your disability" required>
+                            </div>
+                            
+                        </div>
+
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <i class="uil uil-navigator"></i>
+                                <span class="btnText">Back</span>
+                            </div>
+
+                            <button class="sumbit" type="submit">
+                                <span class="btnText">Submit</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="../JAVASCRIPT/script_registration.js"></script>
+</body>
+
+</html>

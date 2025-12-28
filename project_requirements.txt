@@ -1,0 +1,7 @@
+Java 18
+Eclipse (Any Version)
+Apache Tomcat 9 - (No need to install, just extract and set the server directly)
+Oracle 10g
+Javax mail jar files (Optional)
+
+Note - Right click on project -> Properties -> Project Facets -> Choose (Java - 18),(Dynamic Web Module - 4.0)
